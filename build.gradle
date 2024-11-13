@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.example'
+version = '1.0'
+
+application {
+    mainClass = 'userinfoapp.Main' // Укажите путь к вашему основному классу
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Добавьте сюда зависимости, если в будущем потребуется
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
